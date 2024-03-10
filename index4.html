@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+  <script src="../assets/js/color-modes.js"></script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <title>AboutUs</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./index3.html">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, 0.1);
+      border: solid rgba(0, 0, 0, 0.15);
+      border-width: 1px 0;
+      box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+        inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -0.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
+    }
+
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 40px;
+    }
+
+    .project {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
+
+    .contact {
+      margin-bottom: 20px;
+      border: 1px;
+      padding: 20px;
+    }
+
+
+    .website {
+      margin-bottom: 20px;
+    }
+
+    .website img {
+      max-width: 100px;
+      height: auto;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <h1 id="name">MAPPY</h1>
+
+    <nav id="horizontal_navigation">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./index3.html">About Us</a></li>
+        <li><a href="./index4.html">Tutorial</a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="#contact"><button id="cta_button">Contact Us</button></a>
+  </header>
+
+
+  <main>
+    <section>
+      <h1 style="text-align: center; padding: 5%">How to use the website</h1>
+
+      <section id="about">
+        <div class="container">
+          <img src="pictures/tutorials/tut0.png" alt="Profile Photo" style="width: 100%" />
+          <p>
+            This is the main interface of the website, which shows the main map, and the search bar on top.
+            You can type in any location as you would in google maps. This pulls from the google maps api, Therefore
+            it is limited to countries that support google maps.
+          </p>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <img src="pictures/tutorials/tut1.png" alt="Profile Photo" style="width: 100%" />
+          <p>
+            Begin by searching the location of the first point of travel, then it will look up 9 different places nearby
+            that location.
+            Within the 5 kilometer radius.
+            The categories include: restaurant, museum, cafe, night club, clothing stores
+            We are working on an added feature, refresh function.
+            The data pulled is from the google maps places library as a JSON object containing the picture, the name,
+            the address and the location.
+            We are also planning to implement the other features that the API supports. Such as reviews, open and close
+            hours to built a better user experience.
+
+          </p>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container" style="padding-bottom: 10rem">
+          <img src="pictures/tutorials/tut2.png" alt="Profile Photo"
+            style="width: 30%; float: left ; margin-right: 5rem" />
+          <p>
+            When the recomended boxes are hovered over, the name of the place and a "+" button is implemented to the
+            desired location of route and be added to the list of selected locations.
+            In the future we would like to implement the Google routes features to view routes on the maps.
+            The images on the rights side recommended page mirrors on the the maps for easier user identification.
+
+          </p>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <img src="pictures/tutorials/tut3.png" alt="Profile Photo" style="width: 100%" />
+          <p>
+            In order from left to right, is in the order of precedence. Include the first point of travel on the left
+            most column and continue to the right.
+            In the future, an added feature we look to add is a time feature. Including the time to travel and adjusting
+            time as needed by the user.
+          </p>
+        </div>
+      </section>
+      <section id="about">
+        <div class="container" style="padding-bottom: 10rem">
+          <img src="pictures/tutorials/tut4.png" alt="Profile Photo"
+            style="width: 30%; float:left; margin-right: 5rem" />
+          <p>
+            When you hover over the location, the name of the place will pop-up. This will help user to identify easily
+            the location they have selected before.
+          </p>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container" style="padding-bottom: 10rem; padding-top: 10rem">
+          <h1>Travel Website Recommendations</h1>
+          <p>Click image for more information.</p>
+          <div id="websites-container"></div>
+        </div>
+      </section>
+
+    </section>
+
+  </main>
+
+  
+
+  <!-- footer -->
+  <footer id="footer" >
+    <section id="contact" class="contact">
+      <p style="color:white">Phone: +1 (515) 815-4987</p>
+
+      <p style="color:white">Email: nawang2@iastate.edu</p>
+
+      <p style="color:white">Instagram: alx__wang</p>
+
+    </section>
+    <section id="contact" class="contact">
+      <p style="color:white">Phone: +1 (515) 520-5750</p>
+
+      <p style="color:white">Email: belle27@iastate.edu</p>
+
+      <p style="color:white">Instagram: yiyunkhor</p>
+    </section>
+  </a>
+
+
+  <script>
+    // Function to display websites
+    function displayWebsites(websites) {
+      const container = document.getElementById('websites-container');
+
+      websites.forEach(website => {
+        const websiteElement = document.createElement('div');
+        websiteElement.classList.add('website');
+
+        websiteElement.innerHTML = `
+      <h2>${website.name}</h2>
+      <p>${website.description}</p>
+      <a href="${website.url}" target="_blank">
+        <img src="${website.image}"  alt="${website.name}" style='width:200px;'>
+      </a><br/><br/>`;
+      console.log("run");
+    
+
+        container.appendChild(websiteElement);
+      });
+    }
+
+    // Fetch the JSON data from the travel-websites.json file
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => displayWebsites(data.websites))
+      .catch(error => console.error('Error loading the JSON file:', error));
+  </script>
+
+
+
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

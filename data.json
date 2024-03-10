@@ -1,0 +1,24 @@
+{
+    "websites": [
+      {
+        "name": "TripAdvisor",
+        "url": "https://www.tripadvisor.com",
+        "description": "TripAdvisor offers reviews and booking capabilities for hotels, flights, and attractions worldwide.",
+        "image": "pictures/Tripadvisor.jpg"
+      },
+      {
+        "name": "Lonely Planet",
+        "url": "https://www.lonelyplanet.com",
+        "description": "Lonely Planet provides travel guides, tips, and information for countries all over the world.",
+        "image": "pictures/LonelyPlanet.png"
+      },
+      {
+        "name": "Expedia",
+        "url": "https://www.expedia.com",
+        "description": "Expedia helps travelers book hotels, flights, car rentals, and cruises, often at discounted rates.",
+        "image": "pictures/Expedia.jpeg"
+      }
+    ]
+}
+  
+  

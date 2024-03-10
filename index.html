@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjYXZxKuPYLUKNH-v_RhheHwhBP8UyV44&loading=async&&libraries=places&callback=initMap"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Home</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script async src="./index.js"></script>
+    
+  </head>
+
+  <body>
+    <header>
+      <h1 id="name">MAPPY</h1>
+
+      <nav id="horizontal_navigation">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./index3.html">About Us</a></li>
+          <li><a href="./index4.html">Tutorial</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="#contact"><button id="cta_button">Contact Us</button></a>
+    </header>
+
+    <div class="main_container">
+      <!-- This is the Map div -->
+      <div id="maps" class="subcontainer-1" onload="initMap()"></div>
+
+      <!-- Reccomended places -->
+      <div class="subcontainer-2">
+        <!-- SearchBox -->
+        <form id="searchBox" class="searchplace_bar">
+          <div id="lol"></div>
+          <input
+            name="searchMain"
+            type="text"
+            placeholder="Search for Places"
+            value="Iowa State University"
+            refresh="false"
+          />
+          <button
+            id ="searchButton"
+            type="button"
+            style="font-size: 17px; color: black"
+            class="search"
+            refresh="false"
+            onclick="searchPlaces()"
+          >
+            <i class="fa fa-search"></i>
+          </button>
+          <!-- <button
+            type="button"
+            style="font-size: 20px"
+            class="refresh"
+            onclick="nearbyPlaces()"
+          >
+            <i class="fa fa-refresh"></i>
+          </button> -->
+        </form>
+        <script>
+          // Get the input field
+          var input = document.getElementById("searchBox");
+
+          // Execute a function when the user presses a key on the keyboard
+          input.addEventListener("keypress", function (event) {
+            // If the user presses the "Enter" key on the keyboard
+            if (event.key === "Enter") {
+              // Cancel the default action, if needed
+              event.preventDefault();
+              // Trigger the button element with a click
+              document.getElementById("searchButton").click();
+            }
+          });
+        </script>
+
+        <!-- Places -->
+        <div class="recommended_places">
+          <div id="place1" class="box">
+            <div class="place_name">
+              <p id="name-place1">No more places found</p>
+              <button onclick="addedLoc(0)" style="font-size: 20px">
+                <i class="fa fa-plus"></i>
+              </button>
+              <!-- <button onclick="discover()">Discover</button> -->
+            </div>
+          </div>
+
+          <div id="place2" class="box">
+            <div class="place_name">
+              <p id="name-place2">No more places foun</p>
+              <button onclick="addedLoc(1)" style="font-size: 20px">
+                <i class="fa fa-plus"></i>
+              </button>
+              <!-- <button onclick="discover()">Discover</button> -->
+            </div>
+          </div>
+
+          <div id="place3" class="box">
+            <div class="place_name">
+              <p id="name-place3">No more places foun</p>
+              <button onclick="addedLoc(2)" style="font-size: 20px">
+                <i class="fa fa-plus"></i>
+              </button>
+              <!-- <button onclick="discover()">Discover</button> -->
+            </div>
+          </div>
+
+          <div id="place4" class="box">
+            <div class="place_name">
+              <p id="name-place4">No more places foun</p>
+              <button onclick="addedLoc(3)" style="font-size: 20px">
+                <i class="fa fa-plus"></i>
+              </button>
+              <!-- <button onclick="discover()">Discover</button> -->
+            </div>
+          </div>
+          <div id="place5" class="box">
+            <div class="place_name">
+              <p id="name-place5">No more places foun</p>
+              <button onclick="addedLoc(4)" style="font-size: 20px">
+                <i class="fa fa-plus"></i>
+              </button>
+              <!-- <button onclick="discover()">Discover</button> -->
+            </div>
+          </div>
+          <div id="place6" class="box">
+            <div class="place_name">
+              <p id="name-place6">No more places foun</p>
+              <button onclick="addedLoc(5)" style="font-size: 20px">
+                <i class="fa fa-plus"></i>
+              </button>
+              <!-- <button onclick="discover()">Discover</button> -->
+            </div>
+          </div>
+          <div id="place7" class="box">
+            <div class="place_name">
+              <p id="name-place7">No more places foun</p>
+              <button onclick="addedLoc(6)" style="font-size: 20px">
+                <i class="fa fa-plus"></i>
+              </button>
+              <!-- <button onclick="discover()">Discover</button> -->
+            </div>
+          </div>
+          <div id="place8" class="box">
+            <div class="place_name">
+              <p id="name-place8">No more places foun</p>
+              <button onclick="addedLoc(7)" style="font-size: 20px">
+                <i class="fa fa-plus"></i>
+              </button>
+              <!-- <button onclick="discover()">Discover</button> -->
+            </div>
+          </div>
+          <div id="place9" class="box">
+            <div class="place_name">
+              <p id="name-place9">No more places foun</p>
+              <button onclick="addedLoc(8)" style="font-size: 20px">
+                <i class="fa fa-plus"></i>
+              </button>
+              <!-- <button onclick="discover()">Discover</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- add in places -->
+    <div class="submain_container">
+      <div class="day_count">Itinerary</div>
+      <div class="placeAdd" style="scrollbar-width: none">
+        <!-- More boxes can be dynamically added -->
+      </div>
+    </div>
+
+    <!-- <button class="dustbin" style="font-size: 24px">
+      <i class="fa fa-trash-o"></i>
+    </button> -->
+
+    <!-- footer -->
+    <footer id="footer" >
+      <section id="contact" class="contact">
+        <p style="color:white">Phone: +1 (515) 815-4987</p>
+  
+        <p style="color:white">Email: nawang2@iastate.edu</p>
+  
+        <p style="color:white">Instagram: alx__wang</p>
+
+      </section>
+      <section id="contact" class="contact">
+        <p style="color:white">Phone: +1 (515) 520-5750</p>
+  
+        <p style="color:white">Email: belle27@iastate.edu</p>
+  
+        <p style="color:white">Instagram: yiyunkhor</p>
+      </section>
+    </a>
+
+    </footer>
+
+    <script src="./flexbox_row_scrollable.js"></script>
+  </body>
+</html>
